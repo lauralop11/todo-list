@@ -1,5 +1,4 @@
-$primary-color: #1ab6ea;
-$secondary-color: #5b8065;
+$primary-color: #5b8065;
 $font-family: Arial, sans-serif;
 
 body {
@@ -11,11 +10,13 @@ h1 {
   color: $primary-color;
   text-align: center;
 }
-.search {
+.App {
   display: flex;
-  place-content: center;
-  gap: 10px;
-  margin:20px 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.search {
   &-input {
     padding: 10px;
     width: 300px;
@@ -30,8 +31,35 @@ h1 {
   &-button {
     border: none;
     padding: 10px 20px;
-    background-color: $secondary-color;
+    background-color: $primary-color;
     color: white;
     border-radius: 5px;
+  }
+}
+.show {
+  &-list {
+    list-style: none;
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(228, 226, 226, 0.343);
+    border-radius: 5px;
+    li {
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      .status {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+      }
+    }
+    li.completed {
+      text-decoration: line-through;
+      color: gray;  
+      .status {
+        display: none;
+      }  
+    }
   }
 }
