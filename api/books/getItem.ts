@@ -4,7 +4,7 @@ import { neon } from '@neondatabase/serverless'
 const URL: string = process.env.DATABASE_URL || '';
 
 export default async function handler (req: VercelRequest, res: VercelResponse) {
-   console.log(process.env.DATABASE_URL);
+  console.log("DATABASE_URL en producción:", process.env.DATABASE_URL ? "✅ existe" : "❌ no existe");
   const sql = neon(URL);
   try {
     const data = await sql`SELECT * FROM book`;
