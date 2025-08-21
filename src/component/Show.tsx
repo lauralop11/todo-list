@@ -21,7 +21,7 @@ async function getBooks() {
   }
 }
 
-export function Show ({table}: {table: string}) {
+export default function Show ({table}: {table: string}) {
   const [ items, setItems ] = useState<Item[]>([]);
   const [ reload, setReload ] = useState<boolean>(false);
 
@@ -39,7 +39,7 @@ export function Show ({table}: {table: string}) {
  
   const handleClick = async (id:number | string) => {
    const newStatus = 'true';
-   const apiEndpoint = table === 'list' ? '/api/list/postItem' : '/api/books/postItem';
+   const apiEndpoint = table === 'list' ? '/api/list/updateItem' : '/api/books/updateItem';
     try {
       const response = await fetch (apiEndpoint, {
       method: 'PATCH',

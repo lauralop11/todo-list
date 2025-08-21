@@ -1,5 +1,5 @@
 import Search from './component/Search.tsx'
-import {Show }from './component/Show.tsx'
+import Show from './component/Show.tsx'
 
 export default function App (){
   return (

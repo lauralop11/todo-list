@@ -2,9 +2,7 @@
   "name": "todo-list",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "build:api": "tsc -p tsconfig.server.json",
     "copy-api": "cpx \"api/**/*\" dist/api",
     "dev": "vite",
     "build": "tsc -b && vite build && npm run copy-api",
