@@ -3,7 +3,7 @@ import { neon } from '@neondatabase/serverless'
 
 const URL: string = process.env.DATABASE_URL || '';
 
-export default async function handler (req, res: VercelResponse) {
+export default async function handler (req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'PATCH') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
