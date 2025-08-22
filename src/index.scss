@@ -19,7 +19,7 @@ h1 {
 .search {
   &-input {
     padding: 10px;
-    width: 300px;
+    width: 200px;
     border: none;
     border-radius: 5px;
     background-color: rgba(228, 226, 226, 0.343);
@@ -47,11 +47,14 @@ h1 {
       margin: auto;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 10px;
       .status {
         cursor: pointer;
         border: none;
         background-color: transparent;
+        font-size: 20px;
+        padding: 0 15px;
       }
     }
     li.completed {

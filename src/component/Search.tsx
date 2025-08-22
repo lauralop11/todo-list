@@ -18,6 +18,7 @@ export default function Search ({table}: {table: string}) {
       if (response.ok) {
         console.log('Se guardo con el exito');
         setValue('');
+        window.location.reload();
       }
     }catch (error) {
       console.error('Error adding item:', error);
