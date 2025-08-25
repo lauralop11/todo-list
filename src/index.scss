@@ -60,9 +60,9 @@ h1 {
     li.completed {
       text-decoration: line-through;
       color: gray;  
-      .status {
+      .check {
         display: none;
-      }  
+      }
     }
   }
 }

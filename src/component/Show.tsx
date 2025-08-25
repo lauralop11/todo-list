@@ -11,14 +11,13 @@ export default function Show ({table}: {table: string}) {
           <li key={item.id} className={`${item.status === 'true'? 'completed' : ''}`}>
            {item.content} 
            <div>
-             <button className='status' onClick={() => handleClick(item.id, table)}>
-             👍
+             <button className='status check' onClick={() => handleClick(item.id, table)}>
+             ✅
            </button>
            <button className='status' onClick={() => handleClickDelete(item.id, table)}>
-            👎
+            ❌
            </button>
            </div>
-           
           </li>
         ))
         }
